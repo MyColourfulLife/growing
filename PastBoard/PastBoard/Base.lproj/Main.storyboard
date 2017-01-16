@@ -29,11 +29,20 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNE-5j-vw7">
-                                <rect key="frame" x="172" y="85" width="31" height="30"/>
+                                <rect key="frame" x="88" y="80" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="粘贴"/>
                                 <connections>
                                     <action selector="paste:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUb-gQ-1Sc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZK-V2-yUq">
+                                <rect key="frame" x="249" y="80" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="选择"/>
+                                <connections>
+                                    <action selector="chooseAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qvY-9M-DSI"/>
+                                    <action selector="paste:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8vv-eR-XGz"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -25,7 +25,7 @@
    UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
     
     if ([pasteBoard hasURLs]){
-        self.textField.text = pasteBoard.URL.description;//剪切板网页
+        self.textField.text = pasteBoard.string;//剪切板网页
         return;
     }
     
@@ -37,6 +37,23 @@
 
 }
 
+/**
+ 选择文字
+ 通过文本框的代理更好，这里简单通过按钮控制
+ @param sender 按钮
+ */
+- (IBAction)chooseAll:(id)sender {
+    
+    //获取当前的选择
+   UITextRange *textRange = self.textField.selectedTextRange;
+    //创建结束点
+    UITextPosition *endPostion  = [self.textField positionFromPosition:textRange.start offset:self.textField.text.length ];
+    //创建新的选择区域
+    UITextRange *newTextRange = [self.textField textRangeFromPosition:textRange.start toPosition:endPostion];
+    //选择全部
+    [self.textField setSelectedTextRange:newTextRange];
+    
+}
 
 
 @end
